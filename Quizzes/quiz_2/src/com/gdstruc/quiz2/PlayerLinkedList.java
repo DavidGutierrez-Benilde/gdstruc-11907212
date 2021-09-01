@@ -12,7 +12,6 @@ public class PlayerLinkedList {
 
     public void removeFromFront() // remove the first element of the Linked List
     {
-        PlayerNode playerNode = head;
         head = head.getNextPlayer();
     }
 
