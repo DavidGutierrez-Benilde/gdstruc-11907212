@@ -2,32 +2,28 @@ package com.gdstruc.quiz2;
 
 public class PlayerLinkedList {
     private PlayerNode head;
+    private int listSize;
 
     public void addToFront (Player player)
     {
         PlayerNode playerNode = new PlayerNode(player);
         playerNode.setNextPlayer(head);
         head = playerNode;
+        listSize++;
     }
 
     public void removeFromFront() // remove the first element of the Linked List
     {
         head = head.getNextPlayer();
+        listSize--;
     }
 
-    public void listSize()
+    public int getListSize()
     {
-        int amountOfElements = 0;
-        PlayerNode current = head;
-        while (current != null)
-        {
-            amountOfElements++;
-            current = current.getNextPlayer();
-        }
-        System.out.println("No. of elements present in the list: " + amountOfElements);
+        return listSize;
     }
 
-    public void contains(Player player) // create a contains() function similar to the one found in ArrayList
+    public boolean contains(Player player) // create a contains() function similar to the one found in ArrayList
     {
         PlayerNode current = head;
 
@@ -39,13 +35,10 @@ public class PlayerLinkedList {
                 break;
         }
 
-        if (current == null)
-            System.out.println(false);
-        else
-            System.out.println(true);
+        return current != null;
     }
 
-    public void indexOf(Player player) // create a indexOf() function similar to the one found in ArrayList
+    public int indexOf(Player player) // create a indexOf() function similar to the one found in ArrayList
     {
         int noBeforeIndex = 0;
         PlayerNode current = head;
@@ -65,7 +58,7 @@ public class PlayerLinkedList {
             }
         }
 
-            System.out.println(noBeforeIndex);
+            return noBeforeIndex;
     }
 
 

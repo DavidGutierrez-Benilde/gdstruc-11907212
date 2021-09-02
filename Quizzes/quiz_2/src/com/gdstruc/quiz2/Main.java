@@ -15,9 +15,9 @@ public class Main {
         playerLinkedList.addToFront(hpDeskjet);
 
         playerLinkedList.removeFromFront(); // function that removes the first element
-        playerLinkedList.listSize(); // function that checks no. of elements present in linked list
-        playerLinkedList.contains(hpDeskjet); // function that acts the same as ArrayList.contains()
-        playerLinkedList.indexOf(hpDeskjet); // function that acts the same as ArrayList.indexOf()
+        System.out.println(playerLinkedList.getListSize()); // function that checks no. of elements present in linked list
+        System.out.println(playerLinkedList.contains(hpDeskjet)); // function that acts the same as ArrayList.contains()
+        System.out.println(playerLinkedList.indexOf(hpDeskjet)); // function that acts the same as ArrayList.indexOf()
 
         playerLinkedList.printList();
     }
