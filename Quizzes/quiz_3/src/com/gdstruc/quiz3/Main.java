@@ -16,7 +16,7 @@ public class Main {
 
         while (turn < 11) {
             String input = "";
-            int randomNumber = rngRange (1, 7);
+            int randomNumber = randomRange (1, 7);
 
             System.out.println("=== Start of Turn: " + turn + " ===");
 
@@ -58,7 +58,7 @@ public class Main {
 
     }
 
-    public static int rngRange(int min, int max)
+    public static int randomRange(int min, int max)
     {
         Random random = new Random();
         return random.nextInt(max - min + 1) + min;
